@@ -190,3 +190,42 @@ footer {
         grid-template-columns: 3fr 1fr;
     }
 }
+
+/* Página de login/cadastro */
+
+.container-login-cadastro{
+    grid-area: "main";
+    align-items: center;
+    justify-items: center;
+    color: var(--cor-secundaria);
+    margin-left: 300px;
+}
+
+.container-login-cadastro h1{
+    padding: 20px;
+}
+
+.container-login-cadastro h2{
+    padding: 20px;
+}
+
+.box{
+    padding-top: 10px;
+    text-align: center;
+}
+
+input::placeholder {
+  text-align: center;
+}
+
+.container-login-cadastro button{
+    padding: 10px;
+    margin: 20px 0 10px 80px;
+    background-color: var(--cor-terciaria);
+    border-radius: var(--broda-arredondada);
+    cursor: pointer;
+}
+
+.opcoes{
+    gap: 10px;
+}
