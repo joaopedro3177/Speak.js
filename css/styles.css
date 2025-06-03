@@ -192,9 +192,9 @@ footer {
     }
 }
 
-/* Página de login */
+/* Página de login/cadastro */
 
-.container-login{
+.container-login-cadastro{
     grid-area: "main";
     align-items: center;
     justify-items: center;
@@ -202,11 +202,11 @@ footer {
     margin-left: 300px;
 }
 
-.container-login h1{
+.container-login-cadastro h1{
     padding: 20px;
 }
 
-.container-login h2{
+.container-login-cadastro h2{
     padding: 20px;
 }
 
@@ -219,10 +219,14 @@ input::placeholder {
   text-align: center;
 }
 
-.container-login button{
+.container-login-cadastro button{
     padding: 10px;
     margin: 20px 0 10px 80px;
     background-color: var(--cor-terciaria);
     border-radius: var(--broda-arredondada);
     cursor: pointer;
+}
+
+.opcoes{
+    gap: 10px;
 }
