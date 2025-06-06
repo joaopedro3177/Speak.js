@@ -1,0 +1,227 @@
+@import url(variables-m.css);
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-body);
+    color: var(--color-fontDark);
+    gap: 20px;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-header);
+    padding: 20px;
+    border-radius: var(--broda-arredondada);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+header:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    margin-left: 20px;
+}
+
+.header-logo h3 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.header-logo p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--color-light);
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin-right: 20px;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--color-light);
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: color 0.8s ease;
+}
+
+nav a:hover {
+    color: var(--color-yellow);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    "aside   main"
+    "aside   main";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+/* Conteudo Principal */
+.grid-container main {
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    width: 70vw;
+    position: relative;
+    padding: 60px;
+    background-color: var(--color-bigCard);
+    border-radius: 10px;
+
+}
+
+.grid-container main h2 {
+    position: absolute;
+    top: 0;
+    margin: 20px;
+}
+
+.grid-container main .card-main {
+    background-color: var(--color-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 350px;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #000000c4;
+    line-height: 1.5;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.grid-container main .card-main img {
+    width: 107%;
+    border-radius: 10px;
+}
+
+.grid-container main .card-main h4 {
+    margin-top: 10px;
+}
+
+.grid-container main .card-main span{
+    margin: 10px 0;
+}
+
+.grid-container main .card-main button {
+    background-color: var(--color-yellow);
+    color: var(--color-light);
+    border: none;
+    border-radius: 10px;
+    padding: 11px;
+    margin: 10px;
+    font-size: 1.5rem;
+}
+
+/* Barra de Modulos */
+.grid-container aside {
+    grid-area: aside;
+    width: 20vw;
+    background-color: var(--color-bigCard);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grid-container aside .card-aside{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+    width: 85%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #000000c4;
+    background-color: var(--color-light);
+    line-height: 1.5;
+    margin: 20px;
+}
+
+.grid-container aside .card-aside button {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--color-light);
+    border: none;
+}
+
+.grid-container aside .card-aside a {
+    text-decoration: none;
+    color: var(--color-fontDark);
+}
+
+.grid-container aside .card-aside h4 {
+    font-size: 1.2rem;
+    margin: 20px;
+}
+
+.grid-container aside .card-aside p {
+    font-size: 0.9rem;
+    margin: 20px;
+}
+
+/* Rodapé */
+footer{
+    background-color: var(--color-footer);
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 80px;
+    gap: 80px;
+    border-radius: 10px;
+    color: var(--color-light);
+}
+
+footer .titulo{
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+}
+
+footer nav a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    transition: color 0.8s ease;
+}
+
+footer nav a:hover{
+    color: var(--color-header);
+}
+
+footer .links{
+    flex-direction: column;
+}
+
+footer p{
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+}
+
+footer p a{
+    color: var(--color-light);
+    text-decoration: none;
+}

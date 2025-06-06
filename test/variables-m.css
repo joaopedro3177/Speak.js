@@ -1,0 +1,9 @@
+:root {
+    --color-body: #ebe9e9; /* Usado apenas no body */
+    --color-light: #fcfffd; /* Usados como fontes claras e em cards menores, como os dos modulos e as seções do main */
+    --color-bigCard: #f7f7f7; /* Usado em cards maiores como no main e aside */
+    --color-fontDark: #121619; /* Usadas na maiora das fontes */
+    --color-header: #166088; /* Azul usado no cabeçalho e no hover dos links do rodapé */
+    --color-footer: #fec941; /* Amarelo usado no rodapé */
+    --color-yellow: #ffba08; /* Usado nos botões e em hover de links */
+}
