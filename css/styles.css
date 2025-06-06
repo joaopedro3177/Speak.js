@@ -1,20 +1,25 @@
 @import url(reset.css);
-@import url(variables.css);
+@import url(variables-m.css);
+
 
 body {
-    background: var(--cor-de-fundo);
-    font-family: Arial, Helvetica, sans-serif;
-    display: grid;
-    grid-template-areas:
-        "header"
-        "main"
-        "aside"
-        "footer";
-    grid-template-columns: 1fr;
-    gap: 20px;
+    background: var(--color-body);
+    font-family: var(--font);
+    color: var(--color-fontDark);
     padding: 20px;
     min-height: 100vh;
-    color: #333;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    "main   aside"
+    "main   aside";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 10px;
 }
 
 /* Header */
@@ -24,9 +29,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--cor-secundaria);
+    background-color: var(--color-header);
     padding: 20px 30px;
-    border-radius: var(--broda-arredondada);
+    border-radius: var(--borda-arredondada);
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
@@ -44,7 +49,7 @@ body {
 .header-logo p {
     margin: 0;
     font-size: 0.9rem;
-    color: #fff;
+    color: var(--color-light);
 }
 
 .navegacao ul {
@@ -57,18 +62,19 @@ body {
 
 .navegacao ul li a {
     text-decoration: none;
-    color: #fff;
+    color: var(--color-light);
     font-weight: 600;
-    transition: color 0.3s ease;
+    transition: color 1s ease;
 }
 
 .navegacao ul li a:hover {
-    color: #ffd700;
+    color: var(--color-yellow);
 }
 
 /* Main container */
 .container {
     grid-area: main;
+    width: 60vw;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
@@ -78,15 +84,15 @@ body {
     grid-column: 1 / -1;
     text-align: center;
     font-size: 2.2rem;
-    color: #fff;
+    color: var(--color-fontDark);
     margin-bottom: 10px;
     animation: fadeIn 1s ease forwards;
 }
 
 /* Cards */
 .cards {
-    background-color: rgb(231, 197, 0);
-    border-radius: var(--broda-arredondada);
+    background-color: var(--color-bigCard);
+    border-radius: var(--borda-arredondada);
     padding: 20px;
     text-align: center;
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
@@ -105,7 +111,7 @@ body {
 .cards img {
     width: 100%;
     max-width: 150px;
-    border-radius: var(--broda-arredondada);
+    border-radius: var(--borda-arredondada);
     margin-bottom: 15px;
     transition: transform 0.4s ease;
 }
@@ -113,7 +119,7 @@ body {
 .cards h3 {
     margin: 10px 0;
     font-size: 1.2rem;
-    color: #333;
+    color: var(--color-fontDark);
 }
 
 .cards p {
@@ -126,25 +132,27 @@ body {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #0044cc;
-    color: white;
+    background-color: var(--color-yellow);
+    color: var(--color-light);
     text-decoration: none;
-    border-radius: var(--broda-arredondada);
+    border-radius: var(--borda-arredondada);
     font-weight: 600;
-    transition: background-color 0.4s ease, transform 0.4s ease;
+    transition: background-color 1s ease, transform 0.4s ease;
 }
 
 .btn:hover {
-    background-color: #002a80;
+    background-color: var(--color-blue);
     transform: scale(1.1);
 }
 
 /* Aside */
 .container-aside {
     grid-area: aside;
-    background-color: var(--cor-secundaria);
+    width: 30vw;
+    
+    background-color: var(--color-light);
     padding: 20px;
-    border-radius: var(--broda-arredondada);
+    border-radius: var(--borda-arredondada);
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     text-align: center;
     animation: fadeIn 1s ease forwards;
@@ -153,7 +161,7 @@ body {
 .container-aside img {
     width: 100%;
     max-width: 200px;
-    border-radius: var(--broda-arredondada);
+    border-radius: var(--borda-arredondada);
     margin-bottom: 15px;
 }
 
@@ -169,12 +177,63 @@ body {
     margin-bottom: 8px;
 }
 
-footer {
+/* Rodapé */
+footer{
     grid-area: footer;
+    background-color: var(--color-footer);
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 80px;
+    gap: 80px;
+    border-radius: 10px;
+    color: var(--color-light);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+footer .titulo{
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+}
+
+footer nav a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    transition: color 0.8s ease;
+    color: var(--color-light);
+    margin-bottom: 16px;
+}
+
+footer nav a:hover{
+    color: var(--color-blue);
+}
+
+footer .links{
+    flex-direction: column;
+}
+
+footer p{
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+}
+
+footer p a{
+    color: var(--color-light);
+    text-decoration: none;
+}
+
+#copyright {
+    gap: none;
     text-align: center;
     padding: 15px 0;
-    font-size: 0.85rem;
-    color: #fff;
+    font-size: 1.1rem;
+    background-color: var(--color-blue);
+    color: var(--color-light);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 /* Responsividade */
@@ -192,10 +251,12 @@ footer {
 
 .container-login-cadastro{
     grid-area: "main";
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-items: center;
-    color: var(--cor-secundaria);
-    margin-left: 300px;
+    color: var(--color-fontDark);
+    margin: 34px;
 }
 
 .container-login-cadastro h1{
@@ -217,10 +278,21 @@ input::placeholder {
 
 .container-login-cadastro button{
     padding: 10px;
-    margin: 20px 0 10px 80px;
-    background-color: var(--cor-terciaria);
-    border-radius: var(--broda-arredondada);
+    background-color: var(--color-yellow);
+    color: var(--color-light);
+    border-radius: var(--borda-arredondada);
+    font-size: 1.1rem;
     cursor: pointer;
+    border: none;
+}
+
+.container-login-cadastro button{
+    transition: background-color 1s ease, transform 0.4s ease;
+}
+
+.container-login-cadastro button:hover {
+    background-color: var(--color-blue);
+    transform: scale(1.1);
 }
 
 .opcoes{

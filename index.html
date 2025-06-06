@@ -14,62 +14,84 @@
         </div>
         <nav class="navegacao">
             <ul>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="cadastro.html">Sign Up</a></li>
+                <li><a href="/pages/login.html">Login</a></li>
+                <li><a href="/pages/signUp.html">Sign Up</a></li>
                 <li><a href="#">Premium Plan</a></li>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="/index.html">Home</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container">
-        <h1>Discover Our Modules</h1>
-
-        <section class="cards">
-            <img src="./assets/images/htmljpg.jpg" alt="HTML Logo">
-            <h3>HTML and CSS with Basic Communication</h3>
-            <p>Learn basic words and expressions like "tag", "element", and "attribute", practicing reading, writing, and speaking in English.</p>
-            <a class="btn" href="#">Learn More!</a>
-        </section>
-
-        <section class="cards">
-            <img src="./assets/images/htmljpg.jpg" alt="CSS Logo">
-            <h3>CSS and HTML with Vocabulary</h3>
-            <p>Develop vocabulary about shapes, colors, and sizes like "color", "border", "margin", while practicing technical English.</p>
-            <a class="btn" href="#">Learn More!</a>
-        </section>
-
-        <section class="cards">
-            <img src="./assets/images/js.png" alt="JavaScript Logo">
-            <h3>JavaScript and Functional Communication</h3>
-            <p>Explore verbs and expressions like "run", "check", and "repeat", creating instructions and improving technical communication in English.</p>
-            <a class="btn" href="#">Learn More!</a>
-        </section>
-
-        <section class="cards">
-            <img src="./assets/images/php.png" alt="PHP Logo">
-            <h3>PHP and Application with English Content</h3>
-            <p>Practice vocabulary like "server", "request", and "database", reading and explaining technical processes in English with confidence.</p>
-            <a class="btn" href="#">Learn More!</a>
-        </section>
-    </main>
-
-    <aside class="container-aside">
-        <h3>Premium Plan</h3>
-        <img src="./assets/images/plano-premium.png" alt="Premium Plan Image">
-        <p>Want to learn English in a practical and efficient way? In the Premium Plan, English is the main focus and programming is your ally!</p>
-        <ul>
-            <li>✅ 100% English classes</li>
-            <li>✅ Practice with HTML, CSS, JS, and PHP</li>
-            <li>✅ Access to exclusive materials</li>
-            <li>✅ Preparation for the international market</li>
-        </ul>
-        <a class="btn" href="#">Get It Now!</a>
-    </aside>
+    <div class="grid-container">
+        <main class="container">
+            <h1>Discover Our Modules</h1>
+            
+            <section class="cards">
+                <img src="./assets/images/htmljpg.jpg" alt="HTML Logo">
+                <h3>HTML and CSS with Basic Communication</h3>
+                <p>Learn basic words and expressions like "tag", "element", and "attribute", practicing reading, writing, and speaking in English.</p>
+                <a class="btn" href="./pages/modulo1.html">Learn More!</a>
+            </section>
+            
+            <section class="cards">
+                <img src="./assets/images/htmljpg.jpg" alt="CSS Logo">
+                <h3>CSS and HTML with Vocabulary</h3>
+                <p>Develop vocabulary about shapes, colors, and sizes like "color", "border", "margin", while practicing technical English.</p>
+                <a class="btn" href="#">Learn More!</a>
+            </section>
+            
+            <section class="cards">
+                <img src="./assets/images/js.png" alt="JavaScript Logo">
+                <h3>JavaScript and Functional Communication</h3>
+                <p>Explore verbs and expressions like "run", "check", and "repeat", creating instructions and improving technical communication in English.</p>
+                <a class="btn" href="#">Learn More!</a>
+            </section>
+            
+            <section class="cards">
+                <img src="./assets/images/php.png" alt="PHP Logo">
+                <h3>PHP and Application with English Content</h3>
+                <p>Practice vocabulary like "server", "request", and "database", reading and explaining technical processes in English with confidence.</p>
+                <a class="btn" href="#">Learn More!</a>
+            </section>
+        </main>
+        
+        <aside class="container-aside">
+            <h3>Premium Plan</h3>
+            <img src="./assets/images/plano-premium.png" alt="Premium Plan Image">
+            <p>Want to learn English in a practical and efficient way? In the Premium Plan, English is the main focus and programming is your ally!</p>
+            <ul>
+                <li>✅ 100% English classes</li>
+                <li>✅ Practice with HTML, CSS, JS, and PHP</li>
+                <li>✅ Access to exclusive materials</li>
+                <li>✅ Preparation for the international market</li>
+            </ul>
+            <a class="btn" href="#">Get It Now!</a>
+        </aside>
+    </div>
 
     <footer>
-        <p>&copy; 2025 Speak.js - All rights reserved.</p>
+        <div>
+            <strong class="titulo">Speak.js</strong>
+            <p>Learn English by Coding</p>
+        </div>
+
+        <div>
+            <strong class="titulo">Quick Links</strong>
+            <nav class="links">
+                <a href="/pages/login.html">Login</a>
+                <a href="/pages/signUp.html">Sign Up</a>
+                <a href="#">Premium Plan</a>
+                <a href="/index.html">Home</a>
+            </nav>
+        </div>
+
+        <div>
+            <strong class="titulo">Contacts</strong>
+            <p>WhatsApp: <a href="https//wa.me/5511987654321" target="_blank">(11) 98765-4321</a></p>
+            <p>E-mail: <a href="mailto:contato0@petlife.com" target="_blank">contato0@speakjs.com</a></p>
+        </div>
     </footer>
+    <div id="copyright"><p>&copy;2025 Speak.js - All rights reserved.</p></div>
 </body>
 </html>
 
