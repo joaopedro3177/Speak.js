@@ -5,7 +5,7 @@
     --color-fontDark: #121619; /* Usadas na maiora das fontes */
     --color-header: #166088; /* Azul usado no cabeçalho */
     --color-blue: #002a80; /* Usado em botões ou em hover */
-    --color-footer: #fec941; /* Amarelo usado no rodapé */
+    --color-footer: #ecb937; /* (Antigo amarelo: #fec941) */ /* Amarelo usado no rodapé */
     --color-yellow: #ffba08; /* Usado nos botões e em hover de links */
     --font: Arial, Helvetica, sans-serif;
     --borda-arredondada: 7px;
